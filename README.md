@@ -10,3 +10,7 @@ Hal-hal yang bisa dilakukan di program ini antara lain sebagai berikut :
 3. Melakukan delete produk.
 4. Melakukan transaksi jual beli.
 5. Melakukan pelaporan report harian mengenai transaksi yang dilakukan.
+
+note :
+agar program dapat berjalan dengan baik maka diperlukan pembuatan databasenya terlebih dahulu
+dan agar mengunduh TCPDF yang mana ini digunakan dalam pemrosesan pelaporan harian program nantinya.
