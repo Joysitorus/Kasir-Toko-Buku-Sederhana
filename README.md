@@ -11,6 +11,7 @@ Hal-hal yang bisa dilakukan di program ini antara lain sebagai berikut :
 4. Melakukan transaksi jual beli.
 5. Melakukan pelaporan report harian mengenai transaksi yang dilakukan.
 
-note :
-agar program dapat berjalan dengan baik maka diperlukan pembuatan databasenya terlebih dahulu
-dan agar mengunduh TCPDF yang mana ini digunakan dalam pemrosesan pelaporan harian program nantinya.
+Note :
+Agar program dapat berjalan dengan baik maka diperlukan :
+1. Membuat databasenya terlebih dahulu.
+2. Mengungduh file TCPDF yang berguna dalam pelaporan harian di "https://tcpdf.org/".
