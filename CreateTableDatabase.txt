@@ -1,0 +1,46 @@
+-- Membuat tabel "kasir"
+CREATE TABLE kasir (
+  id_kasir VARCHAR(10) PRIMARY KEY,
+  nama_kasir VARCHAR(255),
+  email VARCHAR(255),
+  password VARCHAR(255),
+  foto LONGBLOB
+);
+
+-- Membuat tabel "product"
+CREATE TABLE product (
+  id_product VARCHAR(10) PRIMARY KEY,
+  nama_product VARCHAR(255),
+  harga DECIMAL(10, 2)
+  jumlah_barang INT,
+  foto LONGBLOB
+);
+
+-- Membuat tabel "transaksi"
+CREATE TABLE transaksi (
+  id_transaksi VARCHAR(10) PRIMARY KEY,
+  id_kasir VARCHAR(10),
+  id_product VARCHAR(10),
+  jumlah_barang INT,
+  total_harga DECIMAL(10, 2),
+  tanggal_transaksi DATE,
+  FOREIGN KEY (id_kasir) REFERENCES kasir(id_kasir),
+  FOREIGN KEY (id_product) REFERENCES product(id_product)
+);
+
+-- Membuat tabel "inventory"
+CREATE TABLE inventory (
+  id_inventory VARCHAR(10) PRIMARY KEY,
+  id_product VARCHAR(10),
+  FOREIGN KEY (id_product) REFERENCES product(id_product)
+);
+
+CREATE TABLE keranjang (
+  id_order VARCHAR(10) PRIMARY KEY,
+  id_product VARCHAR(10),
+  quantity INT,
+  total_price DECIMAL(10, 2),
+  order_date DATE,
+  FOREIGN KEY (id_product) REFERENCES product(id_product)
+);
+
